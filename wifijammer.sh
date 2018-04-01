@@ -104,11 +104,7 @@ echo ""
 sleep 0.2
 read -p "enter channel no.: " CHAN
 {airmon-ng start wlan0 $CHAN}&> /dev/null
-echo "Wait 11 Sec .......... "
-service network-manager stop
-sleep 3
-service network-manager start
-sleep 3
+echo "Wait 5 Sec .......... "
 {airmon-ng check kill}&> /dev/null
 sleep 3
 {airmon-ng start wlan0}&> /dev/null
